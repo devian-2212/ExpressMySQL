@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const dotenv = require('dotenv');
-dotenv.config();
+
 
 const dbService = require('./dbService');
 
@@ -45,4 +44,4 @@ app.get('/search/:name', (request, response) => {
     .catch(err => console.log(err));
 })
 
-app.listen(process.env.PORT, () => console.log('app is running'));
+app.listen(3000, () => console.log('app is running'));
